@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+    width: 100%;
+}
+
+.bannertopo {
+    position: fixed;
+    width: 100%;
+    height: 92px;
+    background-color: #CF2B2B;
+    top: 0;
+    right: 0;
+}
+
+.bannertopo h1 {
+    color: white;
+    font-size: 44px;
+    font-weight: 400;
+    margin: 8px 0 0 21px;
+}
+
+.bannertopo p {
+    color: white;
+    font-size: 18px;
+    margin: 5px 0 0 21px;
+}
+
+.cards {
+    margin-top: 123px;
+    margin-bottom: 108px;
+    width: 100%;
+}
+
+body h1 {
+    font-size: 26px;
+    margin-left: 19px;
+}
+
+.scroll-cards {
+    width: 100%;
+    display: flex;
+    margin-left: 16px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.card {
+    margin: 17px 16px 17px 0;
+    background-color: white;
+    width: 172px;
+    height: auto;
+    border-radius: 9px;
+}
+
+.card img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    margin: 18px 14px 0 14px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 8px 0 0 15px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+.card p {
+    margin: 4px 11px 0 14px;
+    color: #a6a6a6;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.card h3 {
+    margin: 8px 0 16px 14px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.fecharpedido {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    
+
+}
+
+.botao {
+    background-color: #cbcbcb;
+    height: 61px;
+    width: 85%;
+    border-radius: 50px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.botao h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.5px;
+    display: none;
+}
+
+.botao p {
+    color: white;
+    width: 55%;
+    font-size: 20px;
+    font-weight: 400px;
+    line-height: 23.5px;
+    text-align: center;
+
+}
+
+
