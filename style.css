@@ -23,6 +23,7 @@ body {
     top: 0;
     right: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 .bannertopo h1 {
@@ -64,7 +65,12 @@ body h1 {
     
 }
 
+.scroll-cards :last-child {
+    margin-right: 16px;
+}
+
 .card {
+    position: relative;
     margin: 17px 0 17px 16px;
     background-color: white;
     width: 172px;
@@ -73,15 +79,28 @@ body h1 {
     box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
 }
 
-.scroll-cards :last-child {
-    margin-right: 16px;
+.card ion-icon {
+    display: none;
+}
+
+.selecionado {
+    border: #32B72F solid 5px;  
+}
+
+.selecionado ion-icon {
+    position: absolute;
+    display: initial;
+    bottom: 4.5%;
+    left: 85%;
+    color: #32B72F;
+    font-size: 18px;
 }
 
 .card img {
     width: 144px;
     height: 87px;
     border-radius: 4px;
-    margin: 18px 14px 0 14px;
+    margin: 18px 14px 0 9px;
     object-fit: cover;
 }
 
@@ -101,7 +120,7 @@ body h1 {
 }
 
 .card h3 {
-    margin: 8px 0 16px 14px;
+    margin: 10px 0 8px 14px;
     font-size: 16px;
     font-weight: 500;
 }
@@ -117,7 +136,7 @@ body h1 {
     background-color: white;
 }
 
-.botao {
+.botao-selecionar {
     background-color: #cbcbcb;
     height: 61px;
     width: 85vw;
@@ -128,15 +147,31 @@ body h1 {
     align-items: center;  
 }
 
-.botao h4 {
+.botao-fechar {
+    background-color: #32B72F;
+    height: 61px;
+    width: 85vw;
+    border-radius: 50px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.escondido {
+    display: none;
+}
+
+.botao-fechar h4 {
     color: white;
     font-size: 20px;
     font-weight: 700;
     line-height: 23.5px;
-    display: none;
+    
 }
 
-.botao p {
+.botao-selecionar p {
     color: white;
     width: 55%;
     font-size: 20px;
