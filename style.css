@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-}
-
 h1 {
     font-family: 'Righteous', cursive;
 }
@@ -80,7 +76,7 @@ body h1 {
     width: 172px;
     height: fit-content;
     border-radius: 9px;
-    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);  
+    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
     box-sizing: content-box;
 }
 
@@ -90,7 +86,6 @@ body h1 {
 
 .selecionado {
     border: #32B72F solid 5px;  
-    margin: 12px -5px 12px 11px;
 }
 
 .selecionado ion-icon {
@@ -185,5 +180,3 @@ body h1 {
     line-height: 23.5px;
     text-align: center;
 }
-
-
