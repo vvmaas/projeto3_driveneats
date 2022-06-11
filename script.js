@@ -8,7 +8,8 @@ function selecionarPrato(item) {
         escolhidoPrato.classList.remove("selecionado");
     }
     item.classList.add("selecionado");
-    liberaFechar();
+    liberaFechar()
+ 
 }
 
 function selecionarBebe(item) {
@@ -17,7 +18,8 @@ function selecionarBebe(item) {
         escolhidoBebe.classList.remove("selecionado");
     }
     item.classList.add("selecionado");
-    liberaFechar();
+    liberaFechar()
+  
 }
 
 function selecionarSobre(item) {
@@ -26,14 +28,34 @@ function selecionarSobre(item) {
         escolhidoSobre.classList.remove("selecionado");
     }
     item.classList.add("selecionado");
-    liberaFechar();
+    liberaFechar()
+   
 }
 
 function liberaFechar() {
-    if (escolhidoPrato && escolhidoBebe && escolhidoSobre){
         let bselecionar = document.querySelector(".botao-selecionar");
         let bfechar = document.querySelector(".botao-fechar");
+    if (escolhidoPrato && escolhidoBebe && escolhidoSobre){
         bfechar.classList.remove("escondido");
         bselecionar.classList.add("escondido");
+        
     }
+}
+
+function msgWpp() {
+    let pratoNome = document.querySelector(".prato .selecionado .nome-item").innerHTML;
+    let bebeNome = document.querySelector(".bebida .selecionado .nome-item").innerHTML;
+    let sobreNome = document.querySelector(".sobremesa .selecionado .nome-item").innerHTML;
+
+    let pratoPreco = document.querySelector(".prato .selecionado .valor").innerHTML;
+    let bebePreco = document.querySelector(".bebida .selecionado .valor").innerHTML;
+    let sobrePreco = document.querySelector(".sobremesa .selecionado .valor").innerHTML;
+
+    let mensagemWpp = `Olá, gostaria de fazer o pedido:
+    - Prato: ${pratoNome}
+    - Bebida: ${bebeNome}
+    - Sobremesa: ${sobreNome}
+    Total: ${Number(pratoPreco) + Number(bebePreco) + Number(sobrePreco)}`
+
+    document.querySelector(".botao-fechar").href = document.querySelector(".botao-fechar").href + encodeURIComponent(mensagemWpp);
 }
