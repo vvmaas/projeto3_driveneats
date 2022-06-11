@@ -8,7 +8,7 @@ function selecionarPrato(item) {
         escolhidoPrato.classList.remove("selecionado");
     }
     item.classList.add("selecionado");
-    escolhidoPrato = escolhidoPrato + 1;
+    escolhidoPrato = 1;
     liberaFechar()
 }
 
@@ -18,7 +18,7 @@ function selecionarBebe(item) {
         escolhidoBebe.classList.remove("selecionado");
     }
     item.classList.add("selecionado");
-    escolhidoBebe = escolhidoBebe + 1;
+    escolhidoBebe = 1;
     liberaFechar()
 }
 
@@ -28,7 +28,7 @@ function selecionarSobre(item) {
         escolhidoSobre.classList.remove("selecionado");
     }
     item.classList.add("selecionado");
-    escolhidoSobre = escolhidoSobre + 1;
+    escolhidoSobre = 1;
     liberaFechar()
    
 }
@@ -36,7 +36,7 @@ function selecionarSobre(item) {
 function liberaFechar() {
         let bselecionar = document.querySelector(".botao-selecionar");
         let bfechar = document.querySelector(".botao-fechar");
-    if (escolhidoPrato > 0 && escolhidoBebe>0 && escolhidoSobre>0){
+    if (escolhidoPrato > 0 && escolhidoBebe > 0 && escolhidoSobre > 0){
         bfechar.classList.remove("escondido");
         bselecionar.classList.add("escondido"); 
     }
