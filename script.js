@@ -55,7 +55,7 @@ function msgWpp() {
     - Prato: ${pratoNome}
     - Bebida: ${bebeNome}
     - Sobremesa: ${sobreNome}
-    Total: ${Number(pratoPreco) + Number(bebePreco) + Number(sobrePreco)}`
+    Total: R$ ${(Number(pratoPreco) + Number(bebePreco) + Number(sobrePreco)).toPrecision(2)}`
 
     document.querySelector(".botao-fechar").href = document.querySelector(".botao-fechar").href + encodeURIComponent(mensagemWpp);
 }
