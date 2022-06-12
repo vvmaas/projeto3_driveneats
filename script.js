@@ -51,11 +51,13 @@ function msgWpp() {
     let bebePreco = document.querySelector(".bebida .selecionado .valor").innerHTML;
     let sobrePreco = document.querySelector(".sobremesa .selecionado .valor").innerHTML;
 
+    let totalPreco = (Number(pratoPreco.replace(',', '.')) + Number(bebePreco.replace(',', '.')) + Number(sobrePreco.replace(',', '.')))
+
     let mensagemWpp = `Olá, gostaria de fazer o pedido:
     - Prato: ${pratoNome}
     - Bebida: ${bebeNome}
     - Sobremesa: ${sobreNome}
-    Total: R$ ${(Number(pratoPreco) + Number(bebePreco) + Number(sobrePreco)).toPrecision(2)}`
+    Total: R$ ${totalPreco.toFixed(2)}`
 
     document.querySelector(".botao-fechar").href = document.querySelector(".botao-fechar").href + encodeURIComponent(mensagemWpp);
 }
